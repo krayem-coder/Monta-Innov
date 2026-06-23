@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>INNOVATION DESIGN | Architecture Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#000000",
+              "on-primary-fixed": "#ffffff",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#474747",
+              "on-error-container": "#410002",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "on-secondary": "#ffffff",
+              "background": "#f9f9f9",
+              "on-primary-container": "#ffffff",
+              "surface-container-low": "#f3f3f3",
+              "inverse-on-surface": "#f1f1f1",
+              "secondary": "#5f5e5e",
+              "on-primary": "#e2e2e2",
+              "on-surface-variant": "#474747",
+              "surface-container-lowest": "#ffffff",
+              "inverse-primary": "#c6c6c6",
+              "tertiary-fixed": "#5e5e5e",
+              "on-secondary-container": "#1b1c1c",
+              "on-tertiary": "#e2e2e2",
+              "tertiary": "#3b3b3b",
+              "on-surface": "#1a1c1c",
+              "secondary-container": "#d6d4d3",
+              "on-error": "#ffffff",
+              "primary-fixed": "#5e5e5e",
+              "tertiary-container": "#747474",
+              "primary-fixed-dim": "#474747",
+              "on-tertiary-container": "#ffffff",
+              "secondary-fixed-dim": "#acabab",
+              "on-tertiary-fixed": "#ffffff",
+              "surface-container-high": "#e8e8e8",
+              "on-secondary-fixed": "#1b1c1c",
+              "inverse-surface": "#2f3131",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "surface-bright": "#f9f9f9",
+              "error": "#ba1a1a",
+              "surface-tint": "#5e5e5e",
+              "surface-container-highest": "#e2e2e2",
+              "on-tertiary-fixed-variant": "#e2e2e2",
+              "on-background": "#1a1c1c",
+              "surface-variant": "#e2e2e2",
+              "primary-container": "#3b3b3b",
+              "outline-variant": "#c6c6c6",
+              "outline": "#777777",
+              "surface-dim": "#dadada",
+              "surface": "#f9f9f9",
+              "secondary-fixed": "#c8c6c6",
+              "surface-container": "#eeeeee"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #f9f9f9; }
+        .hero-title { line-height: 0.9; }
+        .vertical-rule { width: 1px; height: 100%; background-color: #c6c6c6; opacity: 0.3; }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f9f9f9]/80 backdrop-blur-md flex justify-between items-center px-8 py-6 w-full mx-auto">
+<div class="font-['Noto_Serif'] text-xl font-black tracking-tighter text-[#000000]">INNOVATION DESIGN</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-['Noto_Serif'] uppercase tracking-[0.1rem] text-[0.75rem] text-[#000000] border-b border-[#000000] pb-1 transition-transform scale-100 active:scale-95" href="#">Home</a>
+<a class="font-['Noto_Serif'] uppercase tracking-[0.1rem] text-[0.75rem] text-[#777777] hover:text-[#000000] transition-colors duration-300 transition-transform scale-100 active:scale-95" href="#">Projects</a>
+<a class="font-['Noto_Serif'] uppercase tracking-[0.1rem] text-[0.75rem] text-[#777777] hover:text-[#000000] transition-colors duration-300 transition-transform scale-100 active:scale-95" href="#">Services</a>
+<a class="font-['Noto_Serif'] uppercase tracking-[0.1rem] text-[0.75rem] text-[#777777] hover:text-[#000000] transition-colors duration-300 transition-transform scale-100 active:scale-95" href="#">Contact</a>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex flex-col justify-end px-8 pb-24 overflow-hidden">
+<div class="absolute inset-0 -z-10">
+<img alt="Innovation Design Hero" class="w-full h-full object-cover grayscale brightness-75" data-alt="Monolithic modern skyscraper facade with repeating geometric glass panels reflecting a clear grey sky in high contrast black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCQmaekn1nA4rVkOpf5lXWpDH7EF4B1fEu1QN3IgG1O425TFE5OSifnPhYzMHothGkBWrrHrykUdjrzA4cZme0xmjV6XGY-UmurXDEsFVH3RDVnTyVeBJFZonocX_W7OwT6h3rvMfYIekBohRUcHU9s1vWc7LscK-GMaRMFxdeX3V-Fbxnq1PcvFPE5xqHLdEfES9uivsAkZGvocPVTKhE8GBqRRmONYA0hAjAdJ_3RX3TAkFK9FPLBbrBiXIru0r_h3-5wrEjQA"/>
+</div>
+<div class="max-w-7xl w-full mx-auto flex flex-col items-start">
+<p class="font-label uppercase tracking-[0.2rem] text-[0.75rem] mb-6 text-on-primary-fixed-variant">Architecture &amp; Interior Studio</p>
+<h1 class="font-headline text-[12vw] md:text-[8rem] font-black text-white hero-title tracking-tighter mb-8">
+                    CRAFTING THE<br/>SILENT VOID
+                </h1>
+<div class="flex items-center gap-4 group cursor-pointer transition-transform duration-300 active:scale-95">
+<span class="font-label uppercase tracking-[0.1rem] text-[0.75rem] text-white">View Selected Works</span>
+<div class="w-12 h-[1px] bg-white group-hover:w-20 transition-all duration-300"></div>
+</div>
+</div>
+</section>
+<!-- The Architectural Grid / Intro -->
+<section class="bg-surface py-32 px-8 border-none">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-4 h-full flex flex-col justify-between py-4">
+<span class="font-label uppercase tracking-[0.1rem] text-[0.75rem] text-outline">EST. 2024</span>
+<div class="hidden md:block vertical-rule my-12"></div>
+</div>
+<div class="md:col-span-8">
+<h2 class="font-headline text-4xl md:text-6xl font-medium tracking-tight text-on-surface mb-12">
+                        We believe in the resonance of materials and the precision of the grid.
+                    </h2>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed max-w-2xl">
+                        Our practice is rooted in the philosophy of architectural silence. We design spaces that don't shout but breathe, utilizing the raw honesty of concrete, steel, and light.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Selected Works (Asymmetric Bento) -->
+<section class="bg-surface-container-low py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<h3 class="font-headline text-2xl tracking-tight text-primary">SELECTED WORKS</h3>
+<span class="font-label text-[0.7rem] uppercase tracking-widest text-outline">Collection 01 — 04</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Item 1 -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="aspect-[16/9] overflow-hidden bg-surface-container-high relative">
+<img alt="The Glass Pavilion" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Interior of a minimalist luxury villa with floor to ceiling windows showing a serene garden and polished concrete floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxmozWqVAJPQT-KSvS7MDRZLFtmweTcdww09uGK5g0f8VO66a8DaAWpRcBCsXCmpM7hqn6BULVZkbeMVb31Fk8hTZ3LOUkNIHslrAZnauLIpPIw_OwbcTo29kgu1lWgGazwqV0SwvdhNy7gKgO4a_cWC2ARnBNb3_RDhQe127V9wf0TkB8FmFEsv_MgQybWRceHiFbsNm-lv6DOw-STy-oJ3QUr3XMKicWTwGSL-af-ja7vpIx137o8X6HQMjeaL0MCvvabil4Jw"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+<span class="text-white font-headline italic">Case Study 01</span>
+</div>
+</div>
+<div class="mt-6 flex justify-between">
+<h4 class="font-body font-bold text-lg uppercase tracking-wider">THE GLASS PAVILION</h4>
+<p class="font-label text-outline uppercase tracking-widest text-xs">Oslo, Norway</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="md:col-span-4 group cursor-pointer md:mt-24">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high relative">
+<img alt="Concrete Spiral" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Striking brutalist concrete stairs winding upwards in an art gallery with dramatic overhead natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmklC0VgaqcHSdI5i1y0NSj00yZwu_BTF6oulPsuG7yd45AP5MwWnriCWW8JfuXUk0nUkeDrUTQZ6fiSczzyRDpEwgHriQyp6jDm4Xr8j9sADDZmYKs22ZlF9ky36PJYpFvGQfDNGrbRfaEQs1km6kfRUSTmjhcBXod9mi3YE5PkZqkdb8KAV09AoTrjoOT44yvEhK4J5tPrQ-hp4ArqKjV4mGnCLePp7444X7-hq0zfKr_B6T-qQlXfrSsr495EMuz5D9X8bSFA"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+<span class="text-white font-headline italic">Case Study 02</span>
+</div>
+</div>
+<div class="mt-6">
+<h4 class="font-body font-bold text-lg uppercase tracking-wider">MONOLITHIC STAIRS</h4>
+<p class="font-label text-outline uppercase tracking-widest text-xs">Berlin, Germany</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="md:col-span-5 group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container-high relative">
+<img alt="Dark Retreat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Exterior shot of a black timber clad minimalist cabin set in a snowy landscape with warm yellow interior lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRkj2c1Ecc1M08rlAcIJrlsvjRfeIGjCxwuKT6BzjyeZXVjTdh7mMd900edKCDRbhdVOI6DihEpn91XllVZmWlKw-y-6L-VoMGZiFJ0ArItTVQ_4ckpB7YpsDNCOjQq0zI19FxotV6wAKCz6whk7NHi4CzYm41gw-auBO-feEn6w_-fOrPYlxqSdydiqYjCSOJwqPdSpkWwszI5mH550UUEE7Xh1FriGR5Bdx8Ku72D6XSMorrZO-8TD3n2gmKKY3HgrMO0wMNlA"/>
+</div>
+<div class="mt-6">
+<h4 class="font-body font-bold text-lg uppercase tracking-wider">THE DARK RETREAT</h4>
+<p class="font-label text-outline uppercase tracking-widest text-xs">Hokkaido, Japan</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="md:col-span-7 group cursor-pointer md:mt-[-8rem]">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container-high relative">
+<img alt="Linear Workspace" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern open-plan office space with long communal oak tables and industrial lighting against a white brick wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIc44Wa6qyDW01_I2ApTpdpmWAowCRuFJ9gKFTiUMMqaf2e3EM3XCbADHLUOKFqyEiAqWZ5oVq9vzrtTUjIpC7NNvzve0paIB8H52o7dk0phQlmJ9bVvBkNEPOpNDTOdh5ninDKOxX_x6-XsWI_cr7eWEtA3QoIws7bSeNxPxvcXDoqC5T5HF740ZDwtgQ0RPGy_6zT_8GrUQX3pLYQtBPtKBViHr7AxCo1BJBv_wiWJUHNa835gKOCTE0sKZFxKCuJ4kHmnpCZw"/>
+</div>
+<div class="mt-6 flex justify-between">
+<h4 class="font-body font-bold text-lg uppercase tracking-wider">LINEAR WORKSPACE</h4>
+<p class="font-label text-outline uppercase tracking-widest text-xs">New York, USA</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Philosophy -->
+<section class="bg-surface py-32 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<img alt="Philosophy Texture" class="w-full aspect-[4/5] object-cover" data-alt="Macro photo of textured raw concrete wall with shadows from a window frame creating a geometric pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK5zgU4CkDOe5cxOLCrTa8dayiG6XoJLeWp3oh8JyDFx5od1c4KuPscM-Ay13BmXGVunV_Ni5an90Dye-PEJ10TH0V33QO7cQqLD01MgRts4ZAsrEhp2xl92lj24IPHFN_uiW_a1bYAdCfTEgqAlqg1vNVEevem0lKMz3HwuEEAjLw1Uj5fXOaP8z5Kk6iFNf459grYAxPjjSPkSD2w3mkb8LXcArmSxuDn-H2vc3p5ueaKaU7m_2BmGclKEYNbWP6ZEFbTOgyuA"/>
+<div class="absolute -bottom-12 -right-12 w-64 h-64 bg-surface-container-highest flex items-center justify-center p-8 hidden md:flex">
+<p class="font-headline text-lg italic text-primary">"The detail is not the detail. The detail is the design."</p>
+</div>
+</div>
+<div>
+<h3 class="font-label uppercase tracking-[0.3rem] text-[0.7rem] text-outline mb-8">OUR PHILOSOPHY</h3>
+<h2 class="font-headline text-5xl font-black tracking-tighter mb-12 leading-none text-primary">REDUCING TO THE ESSENTIALS.</h2>
+<div class="space-y-8">
+<div>
+<p class="font-body font-bold uppercase tracking-widest text-xs mb-2">01. MATERIALITY</p>
+<p class="font-body text-on-surface-variant leading-relaxed">We source materials that age with dignity. Stone, wood, and metal are treated as living elements within our compositions.</p>
+</div>
+<div>
+<p class="font-body font-bold uppercase tracking-widest text-xs mb-2">02. LIGHT AS ARCHITECTURE</p>
+<p class="font-body text-on-surface-variant leading-relaxed">Natural light is our primary building block. We manipulate shadow to define volume and atmosphere.</p>
+</div>
+<div>
+<p class="font-body font-bold uppercase tracking-widest text-xs mb-2">03. STRUCTURAL HONESTY</p>
+<p class="font-body text-on-surface-variant leading-relaxed">Nothing is hidden. The beauty of our work lies in the exposed truth of the engineering.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-primary text-on-primary-fixed py-32 px-8 text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline text-4xl md:text-6xl font-bold tracking-tighter mb-12">READY TO DEFINE YOUR SPACE?</h2>
+<button class="bg-surface text-primary px-12 py-5 font-label font-bold uppercase tracking-[0.2rem] text-[0.75rem] transition-transform scale-100 active:scale-95 hover:bg-on-primary transition-colors duration-300">
+                    START A PROJECT
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#eeeeee] dark:bg-[#121212] grid grid-cols-1 md:grid-cols-2 gap-12 px-8 py-16 w-full">
+<div class="flex flex-col justify-between">
+<div class="font-['Noto_Serif'] text-lg font-bold text-[#000000]">INNOVATION DESIGN</div>
+<p class="font-['Manrope'] text-[0.75rem] tracking-[0.1rem] uppercase text-[#777777] mt-8">© 2024 INNOVATION DESIGN. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<span class="font-['Manrope'] text-[0.75rem] tracking-[0.1rem] uppercase font-bold text-primary">Connect</span>
+<a class="font-['Manrope'] text-[0.75rem] tracking-[0.1rem] uppercase text-[#777777] hover:underline decoration-1 underline-offset-4 opacity-100 hover:opacity-70 transition-opacity" href="#">Instagram</a>
+<a class="font-['Manrope'] text-[0.75rem] tracking-[0.1rem] uppercase text-[#777777] hover:underline decoration-1 underline-offset-4 opacity-100 hover:opacity-70 transition-opacity" href="#">LinkedIn</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-['Manrope'] text-[0.75rem] tracking-[0.1rem] uppercase font-bold text-primary">Legal</span>
+<a class="font-['Manrope'] text-[0.75rem] tracking-[0.1rem] uppercase text-[#777777] hover:underline decoration-1 underline-offset-4 opacity-100 hover:opacity-70 transition-opacity" href="#">Privacy Policy</a>
+<a class="font-['Manrope'] text-[0.75rem] tracking-[0.1rem] uppercase text-[#777777] hover:underline decoration-1 underline-offset-4 opacity-100 hover:opacity-70 transition-opacity" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>
