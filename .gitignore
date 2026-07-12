@@ -23,6 +23,13 @@ dist-ssr
 *.sln
 *.sw?
 
+# Non-project directories (raw source files)
+porfolio
+stitch
+
+# Temporary scripts
+check_images.ps1
+
 # env files
 .env
 .env.local
