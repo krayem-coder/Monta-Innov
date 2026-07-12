@@ -72,22 +72,25 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* CTA Button */}
-        <Link to="/contact" className="navbar__cta btn btn-primary" id="navbar-cta">
-          Devis Gratuit
-        </Link>
+        {/* Action Buttons (CTA + Hamburger) */}
+        <div className="navbar__actions">
+          <Link to="/contact" className="navbar__cta btn btn-primary" id="navbar-cta">
+            <span className="navbar__cta-desktop">Devis Gratuit</span>
+            <span className="navbar__cta-mobile">Devis</span>
+          </Link>
 
-        {/* Hamburger Toggle */}
-        <button
-          className={`navbar__hamburger ${isMobileOpen ? 'navbar__hamburger--open' : ''}`}
-          onClick={() => setIsMobileOpen(!isMobileOpen)}
-          aria-label="Toggle menu"
-          id="hamburger-toggle"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+          {/* Hamburger Toggle */}
+          <button
+            className={`navbar__hamburger ${isMobileOpen ? 'navbar__hamburger--open' : ''}`}
+            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            aria-label="Toggle menu"
+            id="hamburger-toggle"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
