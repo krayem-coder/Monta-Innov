@@ -35,7 +35,7 @@ const Footer = () => {
             </p>
             <div className="footer__social">
               <a
-                href="#"
+                href="https://www.facebook.com/AtelierDesignmontassarbenayech"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -45,7 +45,7 @@ const Footer = () => {
                 <FaFacebookF />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/montassar_ben_ayech/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"

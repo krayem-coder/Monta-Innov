@@ -61,8 +61,8 @@ const About = () => {
           <AnimatedSection className="about-founder__image" direction="left">
             <div className="about-founder__img-wrapper">
               <img
-                src="/images/montacar.jpg"
-                alt="Montacar Ben Ayech - Co-Founder Innovation Design"
+                src="/images/monta1.jpg"
+                alt="Montassar Ben Ayech - Co-Founder Innovation Design"
                 className="about-founder__img"
               />
             </div>
@@ -74,10 +74,10 @@ const About = () => {
             delay={0.2}
           >
             <span className="section-subtitle">Co-Founder</span>
-            <h2 className="section-title">Montacar Ben Ayech</h2>
+            <h2 className="section-title">Montassar Ben Ayech</h2>
             <div className="divider divider-left" />
             <p>
-              Architecte d'intérieur passionné et visionnaire, Montacar Ben
+              Architecte d'intérieur passionné et visionnaire, Montassar Ben
               Ayech est le co-fondateur d'Innovation Design. Avec plus d'une
               décennie d'expérience dans le domaine, il a su développer un style
               unique qui marie élégance contemporaine et fonctionnalité.
@@ -98,14 +98,14 @@ const About = () => {
           <AnimatedSection className="about-story__images" direction="left">
             <div className="about-story__img-main">
               <img
-                src={projects[5].images[0]}
-                alt="Innovation Design - Projet"
+                src="/images/monta3.jpg"
+                alt="Montassar Ben Ayech - Notre Parcours"
               />
             </div>
             <div className="about-story__img-secondary">
               <img
-                src={projects[6].images[0]}
-                alt="Innovation Design - Intérieur"
+                src="/images/monta4.jpg"
+                alt="Montassar Ben Ayech - Présentation Projets"
               />
             </div>
             <div className="about-story__badge">
@@ -125,7 +125,7 @@ const About = () => {
             <p>
               Innovation Design est née de la conviction que chaque espace peut
               devenir un lieu d'inspiration et de bien-être. Fondée par{" "}
-              <strong>Montacar Ben Ayech</strong>, notre agence s'est rapidement
+              <strong>Montassar Ben Ayech</strong>, notre agence s'est rapidement
               imposée comme une référence en architecture intérieure en Tunisie
               et à l'international.
             </p>
@@ -146,56 +146,48 @@ const About = () => {
       </section>
 
       {/* ── Video + Philosophy Section ──────────────────────────────── */}
-      {/* FIX 3 : section dupliquée supprimée — une seule section Philosophie */}
       <section className="section" id="about-video">
         <div className="container">
           <AnimatedSection
-            className="about-video-container"
+            className="services-video-wrapper"
             style={{
-              borderRadius: "var(--radius-xl)",
+              borderRadius: "var(--radius-lg)",
               overflow: "hidden",
               boxShadow: "var(--shadow-xl)",
               padding: "2rem",
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "2rem",
-                flexWrap: "wrap",
-              }}
-            >
+            <div className="services-video-layout">
               {/* Vidéo */}
-              <div style={{ flex: 1, minWidth: "300px" }}>
+              <div className="services-video-col">
                 <video
-                  className="about-presentation-video"
+                  className="services-presentation-video"
                   src="/videos/video1.mp4"
                   controls
                   playsInline
-                  style={{
-                    width: "50%", // AMÉLIORATION : responsive (était 400px fixe)
-                    maxWidth: "500px",
-                    borderRadius: "var(--radius-lg)",
-                    display: "block",
-                  }}
+                  loop
+                  muted
                 />
               </div>
 
               {/* Texte Philosophie */}
-              <div style={{ flex: 1, minWidth: "300px" }}>
+              <div className="services-video-desc">
                 <span className="section-subtitle">Philosophie</span>
                 <h2 style={{ margin: "0.5rem 0 1rem" }}>Notre Vision</h2>
-                <p style={{ fontStyle: "italic", marginBottom: "1rem" }}>
-                  "Le design n'est pas seulement ce à quoi ça ressemble. Le
-                  design, c'est comment ça fonctionne."
-                </p>
-                <p style={{ lineHeight: "1.8", color: "var(--text-muted)" }}>
+                <div className="divider divider-left" />
+                <p style={{ lineHeight: "1.8", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
                   Notre philosophie repose sur l'harmonie entre esthétique et
                   fonctionnalité. Chaque espace que nous concevons est pensé
                   pour être beau, confortable et parfaitement adapté au mode de
                   vie de ses occupants.
                 </p>
+                <ul className="services-video-features">
+                  <li>Design pensé pour sublimer votre quotidien</li>
+                  <li>
+                    Harmonie parfaite entre esthétique et fonctionnalité
+                  </li>
+                  <li>Espaces conçus à votre image et à votre rythme</li>
+                </ul>
               </div>
             </div>
           </AnimatedSection>

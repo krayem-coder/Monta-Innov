@@ -5,6 +5,48 @@
 
 const projects = [
   {
+    id: 'villa-j',
+    title: 'Villa J',
+    category: 'Architecture Intérieure',
+    description: 'Conception et aménagement d\'une villa luxueuse au style contemporain, dotée d\'une piscine extérieure raffinée, de patios lumineux et d\'un agencement sur-mesure d\'exception.',
+    location: 'Tunisie',
+    year: '2025',
+    images: [
+      '/images/portfolio/villa-j/j1.jpg',
+      '/images/portfolio/villa-j/j2.jpg',
+      '/images/portfolio/villa-j/j3.jpg',
+    ],
+  },
+  {
+    id: 'villa-n',
+    title: 'Villa N',
+    category: 'Architecture Intérieure',
+    description: 'Résidence d\'exception au design moderne et épuré. Mariage harmonieux de volumes architecturaux audacieux, de finitions en pierre naturelle et de terrasses surplombantes.',
+    location: 'Tunisie',
+    year: '2025',
+    images: [
+      '/images/portfolio/villa-n/snap1.jpg',
+      '/images/portfolio/villa-n/snap 2.jpg',
+      '/images/portfolio/villa-n/snap 3.jpg',
+      '/images/portfolio/villa-n/snap 4.jpg',
+    ],
+  },
+  {
+    id: 'salle-de-bain-marocaine',
+    title: 'Salle de Bain Marocaine',
+    category: 'Aménagement Sur-Mesure',
+    description: 'Création d\'un espace bien-être et hammam d\'inspiration marocaine traditionnelle et somptueuse. Détails artisanaux, céramiques sculptées, robinetterie dorée et éclairage d\'ambiance tamisé.',
+    location: 'Tunisie',
+    year: '2025',
+    images: [
+      '/images/portfolio/salle-de-bain-marocaine/mar1.jpg',
+      '/images/portfolio/salle-de-bain-marocaine/mar2.jpg',
+      '/images/portfolio/salle-de-bain-marocaine/mar3.jpg',
+      '/images/portfolio/salle-de-bain-marocaine/mar4.jpg',
+      '/images/portfolio/salle-de-bain-marocaine/mar5.jpg',
+    ],
+  },
+  {
     id: 'paris-france',
     title: 'Appartement Paris, France',
     category: 'Architecture Intérieure',

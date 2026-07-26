@@ -69,8 +69,8 @@ const Home = () => {
           >
             <div className="home-hero__image-wrapper">
               <img
-                src={projects[0].images[0]}
-                alt="Innovation Design – Projet phare"
+                src="/images/villa1.jpg"
+                alt="Innovation Design – Villa 1"
                 className="home-hero__image"
               />
             </div>
@@ -83,6 +83,7 @@ const Home = () => {
 
         {/* Scroll indicator */}
         <motion.div
+        
           className="home-hero__scroll"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -102,7 +103,7 @@ const Home = () => {
               <h2 className="section-title">Innovation Design</h2>
               <div className="divider divider-left" />
               <p className="home-intro__text">
-                Fondée par <strong>Montacar Ben Ayech</strong>, Innovation Design est une agence 
+                Fondée par <strong>Montassar Ben Ayech</strong>, Innovation Design est une agence 
                 d'architecture intérieure basée en Tunisie, spécialisée dans la conception 
                 d'espaces résidentiels et commerciaux haut de gamme.
               </p>
@@ -120,8 +121,8 @@ const Home = () => {
               <div className="home-intro__image-grid">
                 <div className="home-intro__img-wrapper home-intro__img-wrapper--large">
                   <img
-                    src={projects[2].images[0]}
-                    alt="Innovation Design projet"
+                    src="/images/villa2.jpg"
+                    alt="Innovation Design – Villa 2"
                     className="home-intro__img"
                   />
                 </div>

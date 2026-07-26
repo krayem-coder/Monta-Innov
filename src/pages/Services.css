@@ -269,20 +269,28 @@
 .services-video-layout {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
 }
 
 .services-video-col {
-  flex: 1;
-  min-width: 300px;
+  flex: 0 0 320px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .services-presentation-video {
-  width: 50%;
-  max-width: 500px;
-  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 9 / 16;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
   display: block;
+  background-color: #000;
 }
 
 .services-video-desc {
@@ -320,9 +328,14 @@
     text-align: center;
   }
 
+  .services-video-col {
+    flex: initial;
+    width: 100%;
+  }
+
   .services-presentation-video {
-    width: 80%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 300px;
     margin: 0 auto;
   }
 
@@ -418,6 +431,7 @@
 
   .services-presentation-video {
     width: 100%;
-    max-width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
   }
 }

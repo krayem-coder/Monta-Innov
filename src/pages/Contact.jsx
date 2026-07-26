@@ -206,7 +206,7 @@ const Contact = () => {
               <h4 className="contact-info__social-title">Suivez-nous</h4>
               <div className="contact-info__social">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/AtelierDesignmontassarbenayech"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-info__social-link"
@@ -214,7 +214,7 @@ const Contact = () => {
                   <FaFacebookF />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/montassar_ben_ayech/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-info__social-link"

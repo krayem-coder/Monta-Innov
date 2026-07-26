@@ -87,7 +87,7 @@ const Services = () => {
         "Sélection de matériaux",
         "Supervision de chantier",
       ],
-      image: projects[0].images[1],
+      image: "/images/villa1.jpg",
     },
     {
       icon: <FiTool />,
@@ -100,7 +100,7 @@ const Services = () => {
         "Optimisation d'espaces",
         "Finitions haut de gamme",
       ],
-      image: projects[2].images[1],
+      image: "/images/villa1.jpg",
     },
     {
       icon: <FiLayers />,
@@ -113,7 +113,7 @@ const Services = () => {
         "Solutions ergonomiques",
         "Design personnalisé",
       ],
-      image: projects[4].images[1],
+      image: "/images/portfolio/salle-de-bain-marocaine/mar1.jpg",
     },
     {
       icon: <FiMonitor />,
@@ -126,7 +126,7 @@ const Services = () => {
         "Plans techniques",
         "Moodboards & concepts",
       ],
-      image: projects[5].images[1],
+      image: "/images/villa2.jpg",
     },
   ];
 
@@ -163,7 +163,8 @@ const Services = () => {
       number: "05",
       title: "Gestion de Projet",
       desc: "Gestion de chantier, planning des travaux, choix des matériaux et suivi de conformité.",
-      image: projects[8].images[0],
+      image:
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     },
     {
       number: "06",
@@ -209,7 +210,7 @@ const Services = () => {
               <div className="services-video-col">
                 <video
                   className="services-presentation-video"
-                  src="/videos/video2.mp4"
+                  src="/videos/coffee-shop.mp4"
                   controls
                   playsInline
                   loop
