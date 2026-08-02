@@ -5,6 +5,19 @@
 
 const projects = [
   {
+    id: 'salon',
+    title: 'Salon',
+    category: 'Architecture Intérieure',
+    description: 'Conception et aménagement d\'un salon moderne et élégant, mêlant confort et esthétique contemporaine.',
+    location: 'Tunisie',
+    year: '2025',
+    images: [
+      '/images/portfolio/salon/sn1.jpg',
+      '/images/portfolio/salon/sn 2.jpg',
+      '/images/portfolio/salon/sn3.jpg',
+    ],
+  },
+  {
     id: 'villa-j',
     title: 'Villa J',
     category: 'Architecture Intérieure',
@@ -150,9 +163,9 @@ const projects = [
   },
   {
     id: 'projet-8',
-    title: 'Aménagement Bureau',
-    category: 'Aménagement Sur-Mesure',
-    description: 'Aménagement d\'un espace de bureau professionnel, conçu pour favoriser la productivité tout en offrant un cadre de travail élégant et inspirant.',
+    title: 'Villa de Luxe Moderne',
+    category: 'Architecture Intérieure',
+    description: 'Aménagement et décoration d\'une luxueuse villa, alliant matériaux nobles, volumes majestueux et design sophistiqué pour un cadre de vie d\'exception.',
     location: 'Tunisie',
     year: '2024',
     images: [
@@ -164,9 +177,9 @@ const projects = [
   },
   {
     id: 'projet-9',
-    title: 'Salon Contemporain',
+    title: 'Villa d\'Exception',
     category: 'Architecture Intérieure',
-    description: 'Création d\'un salon contemporain aux lignes épurées. Un espace de vie chaleureux qui invite à la détente, sublimé par des touches de design audacieuses.',
+    description: 'Rénovation complète d\'une somptueuse villa de luxe. Une harmonie parfaite entre design contemporain, élégance intemporelle et prestations haut de gamme.',
     location: 'Tunisie',
     year: '2023',
     images: [

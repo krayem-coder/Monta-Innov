@@ -145,6 +145,26 @@ const About = () => {
         </div>
       </section>
 
+      {/* ── Projets Phares Section ──────────────────────────────── */}
+      <section className="section about-projects" id="about-projects" style={{ backgroundColor: "var(--bg-alt)" }}>
+        <div className="container">
+          <AnimatedSection className="section-header">
+            <span className="section-subtitle">Nos Réalisations</span>
+            <h2 className="section-title">Aménagement Bureau & Salon Contemporain</h2>
+          </AnimatedSection>
+          <div className="about-projects__grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
+            <AnimatedSection className="about-project-card" style={{ padding: '2.5rem', backgroundColor: 'var(--bg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)' }} direction="left">
+              <h3 style={{ marginBottom: '1.2rem', color: 'var(--primary)', fontSize: '1.5rem' }}>Aménagement Bureau</h3>
+              <p style={{ color: 'var(--text-muted)', lineHeight: '1.8' }}>Aménagement d'un espace de bureau professionnel, conçu pour favoriser la productivité tout en offrant un cadre de travail élégant et inspirant. Chaque détail a été pensé pour allier ergonomie et esthétique moderne.</p>
+            </AnimatedSection>
+            <AnimatedSection className="about-project-card" style={{ padding: '2.5rem', backgroundColor: 'var(--bg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)' }} direction="right">
+              <h3 style={{ marginBottom: '1.2rem', color: 'var(--primary)', fontSize: '1.5rem' }}>Salon Contemporain</h3>
+              <p style={{ color: 'var(--text-muted)', lineHeight: '1.8' }}>Création d'un salon contemporain aux lignes épurées. Un espace de vie chaleureux qui invite à la détente, sublimé par des touches de design audacieuses et des matériaux de haute qualité.</p>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* ── Video + Philosophy Section ──────────────────────────────── */}
       <section className="section" id="about-video">
         <div className="container">

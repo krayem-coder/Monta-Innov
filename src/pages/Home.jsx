@@ -9,8 +9,10 @@ import './Home.css';
  * Home Page – Hero, About preview, Featured projects, Stats, CTA
  */
 const Home = () => {
-  // Show first 3 projects as featured
-  const featuredProjects = projects.slice(0, 3);
+  // Show first 3 original projects as featured (excluding new salon project so home page stays as previous version)
+  const featuredProjects = projects.filter((p) => p.id !== 'salon').slice(0, 3);
+  // Get intro second image (Villa N)
+  const introSecondImage = projects.find((p) => p.id === 'villa-n')?.images[0] || '/images/portfolio/villa-n/snap1.jpg';
 
   return (
     <main className="home" id="home-page">
@@ -128,7 +130,7 @@ const Home = () => {
                 </div>
                 <div className="home-intro__img-wrapper home-intro__img-wrapper--small">
                   <img
-                    src={projects[1].images[0]}
+                    src={introSecondImage}
                     alt="Innovation Design intérieur"
                     className="home-intro__img"
                   />
