@@ -9,6 +9,8 @@ import Projects from './pages/Projects';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import { LanguageProvider } from './context/LanguageContext';
+
 /**
  * App – Main application component with routing and page transitions
  */
@@ -16,7 +18,7 @@ const App = () => {
   const location = useLocation();
 
   return (
-    <>
+    <LanguageProvider>
       <ScrollToTop />
       <Navbar />
       <AnimatePresence mode="wait">
@@ -38,7 +40,7 @@ const App = () => {
         </motion.div>
       </AnimatePresence>
       <FloatingWhatsApp />
-    </>
+    </LanguageProvider>
   );
 };
 

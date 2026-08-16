@@ -1,0 +1,5 @@
+# Robots.txt for Innovation Design Architecture & Design
+User-agent: *
+Allow: /
+
+Sitemap: https://www.innovationdesign.tn/sitemap.xml

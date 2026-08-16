@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import AnimatedSection from "../components/AnimatedSection";
-import projects from "../data/projects";
+import SEO from "../components/SEO";
+import { useLanguage } from "../context/LanguageContext";
 import {
   FiHome,
   FiTool,
@@ -66,7 +67,7 @@ const TimelineStep = ({ step, index, isLast }) => {
         <p className="timeline__card-desc">{step.desc}</p>
         {step.image && (
           <div className="timeline__card-img">
-            <img src={step.image} alt={step.title} />
+            <img src={step.image} alt={step.title} loading="lazy" />
           </div>
         )}
       </motion.div>
@@ -75,56 +76,54 @@ const TimelineStep = ({ step, index, isLast }) => {
 };
 
 const Services = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
       icon: <FiHome />,
-      title: "Architecture Intérieure",
-      description:
-        "Nous concevons des espaces intérieurs qui allient esthétique et fonctionnalité. De la planification spatiale à la sélection des matériaux, chaque détail est pensé pour créer un environnement harmonieux.",
+      title: t('servicesPage.serv1Title'),
+      description: t('servicesPage.serv1Desc'),
       features: [
-        "Planification spatiale",
-        "Conception de plans",
-        "Sélection de matériaux",
-        "Supervision de chantier",
+        t('servicesPage.serv1F1'),
+        t('servicesPage.serv1F2'),
+        t('servicesPage.serv1F3'),
+        t('servicesPage.serv1F4'),
       ],
       image: "/images/villa1.jpg",
     },
     {
       icon: <FiTool />,
-      title: "Rénovation",
-      description:
-        "Transformez votre espace existant en un lieu moderne et fonctionnel. Notre expertise en rénovation couvre tous les aspects, de la démolition à la finition.",
+      title: t('servicesPage.serv2Title'),
+      description: t('servicesPage.serv2Desc'),
       features: [
-        "Rénovation complète",
-        "Mise aux normes",
-        "Optimisation d'espaces",
-        "Finitions haut de gamme",
+        t('servicesPage.serv2F1'),
+        t('servicesPage.serv2F2'),
+        t('servicesPage.serv2F3'),
+        t('servicesPage.serv2F4'),
       ],
       image: "/images/villa1.jpg",
     },
     {
       icon: <FiLayers />,
-      title: "Aménagement Sur-Mesure",
-      description:
-        "Chaque projet est unique. Nous créons des solutions d'aménagement personnalisées, du mobilier sur-mesure aux rangements intégrés.",
+      title: t('servicesPage.serv3Title'),
+      description: t('servicesPage.serv3Desc'),
       features: [
-        "Mobilier sur-mesure",
-        "Rangements intégrés",
-        "Solutions ergonomiques",
-        "Design personnalisé",
+        t('servicesPage.serv3F1'),
+        t('servicesPage.serv3F2'),
+        t('servicesPage.serv3F3'),
+        t('servicesPage.serv3F4'),
       ],
       image: "/images/portfolio/salle-de-bain-marocaine/mar1.jpg",
     },
     {
       icon: <FiMonitor />,
-      title: "Design & Modélisation 3D",
-      description:
-        "Visualisez votre projet avant sa réalisation grâce à nos modélisations 3D photoréalistes. Une immersion complète dans votre futur espace.",
+      title: t('servicesPage.serv4Title'),
+      description: t('servicesPage.serv4Desc'),
       features: [
-        "Rendus photoréalistes",
-        "Visites virtuelles",
-        "Plans techniques",
-        "Moodboards & concepts",
+        t('servicesPage.serv4F1'),
+        t('servicesPage.serv4F2'),
+        t('servicesPage.serv4F3'),
+        t('servicesPage.serv4F4'),
       ],
       image: "/images/villa2.jpg",
     },
@@ -133,43 +132,43 @@ const Services = () => {
   const processSteps = [
     {
       number: "01",
-      title: "Consultation Initiale",
-      desc: "Réunion pour définir le style, le budget, les délais et l'étude du lieu.",
+      title: t('servicesPage.step1Title'),
+      desc: t('servicesPage.step1Desc'),
       image:
         "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     },
     {
       number: "02",
-      title: "Conception",
-      desc: "Conception 2D : plan d'aménagement et plans techniques.",
+      title: t('servicesPage.step2Title'),
+      desc: t('servicesPage.step2Desc'),
       image:
         "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     },
     {
       number: "03",
-      title: "Conception Détaillée et Spécifications",
-      desc: "Réalisation de la conception 3D.",
+      title: t('servicesPage.step3Title'),
+      desc: t('servicesPage.step3Desc'),
       image:
         "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     },
     {
       number: "04",
-      title: "Approvisionnement",
-      desc: "Bordereau estimatif et tarifs d'exécution.",
+      title: t('servicesPage.step4Title'),
+      desc: t('servicesPage.step4Desc'),
       image:
         "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     },
     {
       number: "05",
-      title: "Gestion de Projet",
-      desc: "Gestion de chantier, planning des travaux, choix des matériaux et suivi de conformité.",
+      title: t('servicesPage.step5Title'),
+      desc: t('servicesPage.step5Desc'),
       image:
         "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     },
     {
       number: "06",
-      title: "Livraison du Projet",
-      desc: "Livraison finale du projet, conformité avec la conception 3D et service après-vente.",
+      title: t('servicesPage.step6Title'),
+      desc: t('servicesPage.step6Desc'),
       image:
         "https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     },
@@ -177,6 +176,13 @@ const Services = () => {
 
   return (
     <main className="services-page" id="services-page">
+      <SEO
+        title={t('seo.servicesTitle')}
+        description={t('seo.servicesDesc')}
+        path="/services"
+        image="/images/villa1.jpg"
+      />
+
       {/* Page Header */}
       <section className="hero-minimal" id="services-hero">
         <motion.div
@@ -185,10 +191,10 @@ const Services = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="section-subtitle">Nos Services</span>
-          <h1 className="hero-minimal__title">Ce que nous offrons</h1>
+          <span className="section-subtitle">{t('servicesPage.headerSubtitle')}</span>
+          <h1 className="hero-minimal__title">{t('servicesPage.headerTitle')}</h1>
           <p className="hero-minimal__text">
-            Des solutions complètes pour transformer vos espaces
+            {t('servicesPage.headerText')}
           </p>
         </motion.div>
       </section>
@@ -220,25 +226,20 @@ const Services = () => {
 
               {/* Description */}
               <div className="services-video-desc">
-                <span className="section-subtitle">Présentation</span>
+                <span className="section-subtitle">{t('servicesPage.videoSubtitle')}</span>
                 <h2 style={{ margin: "0.5rem 0 1rem" }}>
-                  L'art du design
+                  {t('servicesPage.videoTitlePart1')}
                   <br />
-                  en mouvement
+                  {t('servicesPage.videoTitlePart2')}
                 </h2>
                 <div className="divider divider-left" />
                 <p style={{ lineHeight: "1.8", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
-                  Découvrez notre approche à travers cette présentation
-                  visuelle. Chaque projet est une invitation à repenser
-                  l'espace, à jouer avec la lumière, les matières et les volumes
-                  pour créer un intérieur qui vous ressemble.
+                  {t('servicesPage.videoDesc')}
                 </p>
                 <ul className="services-video-features">
-                  <li>Conception sur mesure adaptée à votre style de vie</li>
-                  <li>
-                    Matériaux sélectionnés pour leur qualité et durabilité
-                  </li>
-                  <li>Suivi de projet de l'esquisse à la livraison</li>
+                  <li>{t('servicesPage.videoFeat1')}</li>
+                  <li>{t('servicesPage.videoFeat2')}</li>
+                  <li>{t('servicesPage.videoFeat3')}</li>
                 </ul>
               </div>
             </div>
@@ -256,7 +257,7 @@ const Services = () => {
               direction={index % 2 === 0 ? "left" : "right"}
             >
               <div className="services-item__image">
-                <img src={service.image} alt={service.title} />
+                <img src={service.image} alt={service.title} loading="lazy" />
               </div>
               <div className="services-item__content">
                 <div className="services-item__icon">{service.icon}</div>
@@ -276,7 +277,7 @@ const Services = () => {
                   className="btn btn-outline"
                   id={`service-cta-${index}`}
                 >
-                  Demander un devis <FiArrowRight />
+                  {t('servicesPage.requestQuoteBtn')} <FiArrowRight />
                 </Link>
               </div>
             </AnimatedSection>
@@ -288,10 +289,10 @@ const Services = () => {
       <section className="section services-process" id="services-process">
         <div className="container">
           <AnimatedSection className="section-header">
-            <span className="section-subtitle">Notre Processus</span>
-            <h2 className="section-title">Comment nous travaillons</h2>
+            <span className="section-subtitle">{t('servicesPage.processSubtitle')}</span>
+            <h2 className="section-title">{t('servicesPage.processTitle')}</h2>
             <p className="section-description">
-              Un accompagnement complet, de l'idée à la réalisation finale
+              {t('servicesPage.processDescription')}
             </p>
           </AnimatedSection>
 
@@ -313,17 +314,17 @@ const Services = () => {
         <div className="container" style={{ textAlign: "center" }}>
           <AnimatedSection>
             <h2 className="services-cta__title">
-              Vous avez un projet en tête ?
+              {t('servicesPage.ctaTitle')}
             </h2>
             <p className="services-cta__text">
-              Contactez-nous pour une consultation gratuite et personnalisée
+              {t('servicesPage.ctaText')}
             </p>
             <Link
               to="/contact"
               className="btn btn-primary"
               id="services-contact-cta"
             >
-              Nous Contacter <FiArrowRight />
+              {t('servicesPage.ctaBtn')} <FiArrowRight />
             </Link>
           </AnimatedSection>
         </div>

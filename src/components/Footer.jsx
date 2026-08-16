@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaTiktok } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FaThreads } from "react-icons/fa6";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
+import { useLanguage } from "../context/LanguageContext";
 import "./Footer.css";
+
 /**
- * Footer – Premium footer with contact info, navigation, and social links
+ * Footer – Premium footer with contact info, navigation, social links, and FR/EN i18n
  */
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { language, t } = useLanguage();
 
   return (
     <footer className="footer" id="footer">
@@ -21,17 +24,17 @@ const Footer = () => {
                 src="/images/logo.jpg"
                 alt="Innovation Design Logo"
                 className="footer__logo"
+                loading="lazy"
               />
               <div>
                 <h4 className="footer__brand-name">Innovation Design</h4>
                 <span className="footer__brand-tagline">
-                  Interior & Architecture Agency
+                  {t('footer.brandTagline')}
                 </span>
               </div>
             </div>
             <p className="footer__brand-desc">
-              Agence d'architecture intérieure spécialisée dans la création
-              d'espaces uniques, élégants et fonctionnels.
+              {t('footer.brandDesc')}
             </p>
             <div className="footer__social">
               <a
@@ -64,53 +67,63 @@ const Footer = () => {
               >
                 <FaThreads />
               </a>
+              <a
+                href="https://wa.me/21654432952"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="footer__social-link"
+                id="social-whatsapp"
+              >
+                <FaWhatsapp />
+              </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="footer__col">
-            <h5 className="footer__col-title">Navigation</h5>
+            <h5 className="footer__col-title">{t('footer.navTitle')}</h5>
             <nav className="footer__nav">
               <Link to="/" className="footer__link">
-                Accueil
+                {t('nav.home')}
               </Link>
               <Link to="/about" className="footer__link">
-                À Propos
+                {t('nav.about')}
               </Link>
               <Link to="/projects" className="footer__link">
-                Projets
+                {t('nav.projects')}
               </Link>
               <Link to="/services" className="footer__link">
-                Services
+                {t('nav.services')}
               </Link>
               <Link to="/contact" className="footer__link">
-                Contact
+                {t('nav.contact')}
               </Link>
             </nav>
           </div>
 
           {/* Services */}
           <div className="footer__col">
-            <h5 className="footer__col-title">Services</h5>
+            <h5 className="footer__col-title">{t('footer.servicesTitle')}</h5>
             <nav className="footer__nav">
               <Link to="/services" className="footer__link">
-                Architecture Intérieure
+                {t('servicesPage.serv1Title')}
               </Link>
               <Link to="/services" className="footer__link">
-                Rénovation
+                {t('servicesPage.serv2Title')}
               </Link>
               <Link to="/services" className="footer__link">
-                Aménagement Sur-Mesure
+                {t('servicesPage.serv3Title')}
               </Link>
               <Link to="/services" className="footer__link">
-                Design & Modélisation 3D
+                {t('servicesPage.serv4Title')}
               </Link>
             </nav>
           </div>
 
           {/* Contact Info */}
           <div className="footer__col">
-            <h5 className="footer__col-title">Contact</h5>
+            <h5 className="footer__col-title">{t('footer.contactTitle')}</h5>
             <div className="footer__contact-list">
               <div className="footer__contact-item">
                 <FiPhone className="footer__contact-icon" />
@@ -125,7 +138,7 @@ const Footer = () => {
               <div className="footer__contact-item">
                 <FiMapPin className="footer__contact-icon" />
                 <span>
-                  Avenue Habib Bourguiba, Sayada Lamta Bou Hajar, Tunisia, 5099
+                  {t('footer.addressText')}
                 </span>
               </div>
             </div>
@@ -137,10 +150,10 @@ const Footer = () => {
       <div className="footer__bottom">
         <div className="container footer__bottom-container">
           <p className="footer__copyright">
-            &copy; {currentYear} Innovation Design. Tous droits réservés.
+            &copy; {currentYear} Innovation Design. {t('footer.copyright')}
           </p>
           <p className="footer__developer">
-            Développé par { }
+            {t('footer.developerText')}{' '}
             <a
               href="https://www.instagram.com/abdelkrim.saida/"
               target="_blank"

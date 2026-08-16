@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import AnimatedSection from "../components/AnimatedSection";
-import projects from "../data/projects";
+import SEO from "../components/SEO";
+import { useLanguage } from "../context/LanguageContext";
 import { FiPhone, FiMail, FiMapPin, FiSend, FiCheck } from "react-icons/fi";
 import { FaWhatsapp, FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaThreads } from "react-icons/fa6";
 import "./Contact.css";
 
 /**
- * Contact Page – Conversion-optimized form + contact info
+ * Contact Page – Conversion-optimized form + contact info, FR/EN bilingual & SEO
  */
 const Contact = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,6 +44,13 @@ const Contact = () => {
 
   return (
     <main className="contact-page" id="contact-page">
+      <SEO
+        title={t('seo.contactTitle')}
+        description={t('seo.contactDesc')}
+        path="/contact"
+        image="/images/logo.jpg"
+      />
+
       {/* Page Header */}
       <section className="hero-minimal" id="contact-hero">
         <motion.div
@@ -50,10 +59,10 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="section-subtitle">Contact</span>
-          <h1 className="hero-minimal__title">Contactez-Nous</h1>
+          <span className="section-subtitle">{t('contactPage.headerSubtitle')}</span>
+          <h1 className="hero-minimal__title">{t('contactPage.headerTitle')}</h1>
           <p className="hero-minimal__text">
-            Parlons de votre projet et donnons vie à vos idées
+            {t('contactPage.headerText')}
           </p>
         </motion.div>
       </section>
@@ -63,10 +72,9 @@ const Contact = () => {
         <div className="container contact-main__grid">
           {/* Form */}
           <AnimatedSection className="contact-form-wrapper" direction="left">
-            <h2 className="contact-form__heading">Envoyez-nous un message</h2>
+            <h2 className="contact-form__heading">{t('contactPage.formTitle')}</h2>
             <p className="contact-form__subheading">
-              Remplissez le formulaire ci-dessous et nous vous répondrons dans
-              les plus brefs délais.
+              {t('contactPage.formSubtitle')}
             </p>
             <form
               className="contact-form"
@@ -75,69 +83,69 @@ const Contact = () => {
             >
               <div className="contact-form__row">
                 <div className="contact-form__group">
-                  <label htmlFor="contact-name">Nom complet *</label>
+                  <label htmlFor="contact-name">{t('contactPage.nameLabel')}</label>
                   <input
                     type="text"
                     id="contact-name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Votre nom"
+                    placeholder={t('contactPage.namePlaceholder')}
                     required
                   />
                 </div>
                 <div className="contact-form__group">
-                  <label htmlFor="contact-email">Email *</label>
+                  <label htmlFor="contact-email">{t('contactPage.emailLabel')}</label>
                   <input
                     type="email"
                     id="contact-email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="votre@email.com"
+                    placeholder={t('contactPage.emailPlaceholder')}
                     required
                   />
                 </div>
               </div>
               <div className="contact-form__row">
                 <div className="contact-form__group">
-                  <label htmlFor="contact-phone">Téléphone</label>
+                  <label htmlFor="contact-phone">{t('contactPage.phoneLabel')}</label>
                   <input
                     type="tel"
                     id="contact-phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="+216 XX XXX XXX"
+                    placeholder={t('contactPage.phonePlaceholder')}
                   />
                 </div>
                 <div className="contact-form__group">
-                  <label htmlFor="contact-project-type">Type de projet</label>
+                  <label htmlFor="contact-project-type">{t('contactPage.projectTypeLabel')}</label>
                   <select
                     id="contact-project-type"
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleChange}
                   >
-                    <option value="">Sélectionnez...</option>
+                    <option value="">{t('contactPage.selectPlaceholder')}</option>
                     <option value="architecture">
-                      Architecture Intérieure
+                      {t('contactPage.optionArch')}
                     </option>
-                    <option value="renovation">Rénovation</option>
-                    <option value="amenagement">Aménagement Sur-Mesure</option>
-                    <option value="3d">Design & Modélisation 3D</option>
-                    <option value="autre">Autre</option>
+                    <option value="renovation">{t('contactPage.optionReno')}</option>
+                    <option value="amenagement">{t('contactPage.optionFitout')}</option>
+                    <option value="3d">{t('contactPage.option3d')}</option>
+                    <option value="autre">{t('contactPage.optionOther')}</option>
                   </select>
                 </div>
               </div>
               <div className="contact-form__group">
-                <label htmlFor="contact-message">Message *</label>
+                <label htmlFor="contact-message">{t('contactPage.messageLabel')}</label>
                 <textarea
                   id="contact-message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Décrivez votre projet..."
+                  placeholder={t('contactPage.messagePlaceholder')}
                   rows="5"
                   required
                 />
@@ -149,11 +157,11 @@ const Contact = () => {
               >
                 {isSubmitted ? (
                   <>
-                    <FiCheck /> Message Envoyé !
+                    <FiCheck /> {t('contactPage.submittedSuccess')}
                   </>
                 ) : (
                   <>
-                    <FiSend /> Envoyer le Message
+                    <FiSend /> {t('contactPage.submitBtn')}
                   </>
                 )}
               </button>
@@ -167,14 +175,14 @@ const Contact = () => {
             delay={0.2}
           >
             <div className="contact-info__card">
-              <h3 className="contact-info__title">Informations de Contact</h3>
+              <h3 className="contact-info__title">{t('contactPage.infoTitle')}</h3>
               <div className="contact-info__items">
                 <div className="contact-info__item">
                   <div className="contact-info__icon">
                     <FiPhone />
                   </div>
                   <div>
-                    <h4>Téléphone</h4>
+                    <h4>{t('contactPage.phoneHeader')}</h4>
                     <a href="tel:+21654432952">+216 54 432 952</a>
                   </div>
                 </div>
@@ -183,7 +191,7 @@ const Contact = () => {
                     <FiMail />
                   </div>
                   <div>
-                    <h4>Email</h4>
+                    <h4>{t('contactPage.emailHeader')}</h4>
                     <a href="mailto:contact@innovationdesign.com">
                       contact@innovationdesign.com
                     </a>
@@ -194,21 +202,21 @@ const Contact = () => {
                     <FiMapPin />
                   </div>
                   <div>
-                    <h4>Adresse</h4>
+                    <h4>{t('contactPage.addressHeader')}</h4>
                     <span>
-                      Avenue Habib Bourguiba, Sayada Lamta Bou Hajar, Tunisia,
-                      5099
+                      {t('contactPage.addressText')}
                     </span>
                   </div>
                 </div>
               </div>
               <div className="contact-info__divider" />
-              <h4 className="contact-info__social-title">Suivez-nous</h4>
+              <h4 className="contact-info__social-title">{t('contactPage.socialHeader')}</h4>
               <div className="contact-info__social">
                 <a
                   href="https://www.facebook.com/AtelierDesignmontassarbenayech"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Facebook"
                   className="contact-info__social-link"
                 >
                   <FaFacebookF />
@@ -217,6 +225,7 @@ const Contact = () => {
                   href="https://www.instagram.com/montassar_ben_ayech/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Instagram"
                   className="contact-info__social-link"
                 >
                   <FaInstagram />
@@ -225,6 +234,7 @@ const Contact = () => {
                   href="https://www.threads.com/@montassar_ben_ayech?xmt=AQG0LEtedZk2SaLTJiWiB7rMh_nMgVf9Ld3rrP3Gh0YrDOg"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Threads"
                   className="contact-info__social-link"
                 >
                   <FaThreads />
@@ -233,6 +243,7 @@ const Contact = () => {
                   href="https://wa.me/21654432952"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="WhatsApp"
                   className="contact-info__social-link"
                 >
                   <FaWhatsapp />
@@ -240,10 +251,10 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Map Placeholder */}
+            {/* Map */}
             <div className="contact-map">
               <iframe
-                title="Innovation Design Location"
+                title={t('contactPage.mapTitle')}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25821.5!2d10.82!3d35.73!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd8a5c7b5a5a5%3A0x0!2sSayada!5e0!3m2!1sfr!2stn!4v1700000000000!5m2!1sfr!2stn"
                 allowFullScreen=""
                 loading="lazy"

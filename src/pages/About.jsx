@@ -1,43 +1,48 @@
 import { motion } from "framer-motion";
 import AnimatedSection from "../components/AnimatedSection";
-import projects from "../data/projects";
+import SEO from "../components/SEO";
+import { useLanguage } from "../context/LanguageContext";
 import { FiTarget, FiHeart, FiStar, FiAward } from "react-icons/fi";
 import "./About.css";
 
 /**
- * About Page – Agency story, philosophy, values, and founder spotlight
+ * About Page – Agency story, philosophy, values, founder spotlight, FR/EN bilingual & SEO
  */
 const About = () => {
+  const { language, t } = useLanguage();
+
   const values = [
     {
       icon: <FiTarget />,
-      title: "Précision",
-      description:
-        "Chaque détail compte. Nous apportons une attention méticuleuse à chaque aspect de nos réalisations.",
+      title: t('about.valPrecisionTitle'),
+      description: t('about.valPrecisionDesc'),
     },
     {
       icon: <FiHeart />,
-      title: "Passion",
-      description:
-        "Notre amour pour le design et l'architecture nous pousse à repousser les limites de la créativité.",
+      title: t('about.valPassionTitle'),
+      description: t('about.valPassionDesc'),
     },
     {
       icon: <FiStar />,
-      title: "Excellence",
-      description:
-        "Nous visons l'excellence dans chaque projet, en utilisant les meilleurs matériaux et techniques.",
+      title: t('about.valExcellenceTitle'),
+      description: t('about.valExcellenceDesc'),
     },
     {
       icon: <FiAward />,
-      title: "Innovation",
-      description:
-        "Toujours à la pointe des tendances, nous intégrons les dernières innovations en design intérieur.",
+      title: t('about.valInnovationTitle'),
+      description: t('about.valInnovationDesc'),
     },
   ];
 
   return (
-    // FIX 1 : <main> avec className (remplace le fragment invalide `<> className=...`)
     <main className="about" id="about-page">
+      <SEO
+        title={t('seo.aboutTitle')}
+        description={t('seo.aboutDesc')}
+        path="/about"
+        image="/images/monta1.jpg"
+      />
+
       {/* ── Page Header ─────────────────────────────────────────────── */}
       <section className="hero-minimal" id="about-hero">
         <motion.div
@@ -46,24 +51,24 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="section-subtitle">À Propos</span>
-          <h1 className="hero-minimal__title">Notre Histoire</h1>
+          <span className="section-subtitle">{t('about.headerSubtitle')}</span>
+          <h1 className="hero-minimal__title">{t('about.headerTitle')}</h1>
           <p className="hero-minimal__text">
-            Découvrez la vision et la passion qui animent Innovation Design
+            {t('about.headerText')}
           </p>
         </motion.div>
       </section>
 
       {/* ── Founder Section ─────────────────────────────────────────── */}
-      {/* FIX 2 : section déplacée DANS le return (était après le return) */}
       <section className="section about-founder" id="about-founder">
         <div className="container about-founder__grid">
           <AnimatedSection className="about-founder__image" direction="left">
             <div className="about-founder__img-wrapper">
               <img
                 src="/images/monta1.jpg"
-                alt="Montassar Ben Ayech - Co-Founder Innovation Design"
+                alt="Montassar Ben Ayech - Fondateur Innovation Design Tunisie"
                 className="about-founder__img"
+                loading="lazy"
               />
             </div>
           </AnimatedSection>
@@ -73,20 +78,14 @@ const About = () => {
             direction="right"
             delay={0.2}
           >
-            <span className="section-subtitle">Co-Founder</span>
-            <h2 className="section-title">Montassar Ben Ayech</h2>
+            <span className="section-subtitle">{t('about.founderRole')}</span>
+            <h2 className="section-title">{t('about.founderName')}</h2>
             <div className="divider divider-left" />
             <p>
-              Architecte d'intérieur passionné et visionnaire, Montassar Ben
-              Ayech est le co-fondateur d'Innovation Design. Avec plus d'une
-              décennie d'expérience dans le domaine, il a su développer un style
-              unique qui marie élégance contemporaine et fonctionnalité.
+              {t('about.founderBio1')}
             </p>
             <p>
-              Sa vision créative et son sens aigu du détail ont permis à
-              l'agence de se distinguer dans des projets résidentiels et
-              commerciaux d'envergure, aussi bien en Tunisie qu'à
-              l'international, notamment à Paris.
+              {t('about.founderBio2')}
             </p>
           </AnimatedSection>
         </div>
@@ -99,18 +98,20 @@ const About = () => {
             <div className="about-story__img-main">
               <img
                 src="/images/monta3.jpg"
-                alt="Montassar Ben Ayech - Notre Parcours"
+                alt="Montassar Ben Ayech - Parcours et Vision Architecture"
+                loading="lazy"
               />
             </div>
             <div className="about-story__img-secondary">
               <img
                 src="/images/monta4.jpg"
-                alt="Montassar Ben Ayech - Présentation Projets"
+                alt="Montassar Ben Ayech - Présentation Projets d'Intérieur"
+                loading="lazy"
               />
             </div>
             <div className="about-story__badge">
               <span className="about-story__badge-number">2015</span>
-              <span className="about-story__badge-text">Fondée</span>
+              <span className="about-story__badge-text">{t('about.foundedBadge')}</span>
             </div>
           </AnimatedSection>
 
@@ -119,51 +120,22 @@ const About = () => {
             direction="right"
             delay={0.2}
           >
-            <span className="section-subtitle">Notre Parcours</span>
-            <h2 className="section-title">Une passion devenue expertise</h2>
+            <span className="section-subtitle">{t('about.storySubtitle')}</span>
+            <h2 className="section-title">{t('about.storyTitle')}</h2>
             <div className="divider divider-left" />
             <p>
-              Innovation Design est née de la conviction que chaque espace peut
-              devenir un lieu d'inspiration et de bien-être. Fondée par{" "}
-              <strong>Montassar Ben Ayech</strong>, notre agence s'est rapidement
-              imposée comme une référence en architecture intérieure en Tunisie
-              et à l'international.
+              {t('about.storyText1')}
             </p>
             <p>
-              Notre approche se distingue par une écoute attentive des besoins
-              de nos clients, une créativité sans limites et un souci permanent
-              de la qualité. Nous croyons que le design intérieur est bien plus
-              qu'une question d'esthétique — c'est l'art de créer des espaces
-              qui racontent une histoire.
+              {t('about.storyText2')}
             </p>
             <p>
-              De la conception à la réalisation, nous accompagnons chaque client
-              dans un parcours personnalisé, en veillant à ce que chaque projet
-              reflète sa personnalité et ses aspirations.
+              {t('about.storyText3')}
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* ── Projets Phares Section ──────────────────────────────── */}
-      <section className="section about-projects" id="about-projects" style={{ backgroundColor: "var(--bg-alt)" }}>
-        <div className="container">
-          <AnimatedSection className="section-header">
-            <span className="section-subtitle">Nos Réalisations</span>
-            <h2 className="section-title">Aménagement Bureau & Salon Contemporain</h2>
-          </AnimatedSection>
-          <div className="about-projects__grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
-            <AnimatedSection className="about-project-card" style={{ padding: '2.5rem', backgroundColor: 'var(--bg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)' }} direction="left">
-              <h3 style={{ marginBottom: '1.2rem', color: 'var(--primary)', fontSize: '1.5rem' }}>Aménagement Bureau</h3>
-              <p style={{ color: 'var(--text-muted)', lineHeight: '1.8' }}>Aménagement d'un espace de bureau professionnel, conçu pour favoriser la productivité tout en offrant un cadre de travail élégant et inspirant. Chaque détail a été pensé pour allier ergonomie et esthétique moderne.</p>
-            </AnimatedSection>
-            <AnimatedSection className="about-project-card" style={{ padding: '2.5rem', backgroundColor: 'var(--bg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)' }} direction="right">
-              <h3 style={{ marginBottom: '1.2rem', color: 'var(--primary)', fontSize: '1.5rem' }}>Salon Contemporain</h3>
-              <p style={{ color: 'var(--text-muted)', lineHeight: '1.8' }}>Création d'un salon contemporain aux lignes épurées. Un espace de vie chaleureux qui invite à la détente, sublimé par des touches de design audacieuses et des matériaux de haute qualité.</p>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
 
       {/* ── Video + Philosophy Section ──────────────────────────────── */}
       <section className="section" id="about-video">
@@ -192,21 +164,16 @@ const About = () => {
 
               {/* Texte Philosophie */}
               <div className="services-video-desc">
-                <span className="section-subtitle">Philosophie</span>
-                <h2 style={{ margin: "0.5rem 0 1rem" }}>Notre Vision</h2>
+                <span className="section-subtitle">{t('about.philosophySubtitle')}</span>
+                <h2 style={{ margin: "0.5rem 0 1rem" }}>{t('about.philosophyTitle')}</h2>
                 <div className="divider divider-left" />
                 <p style={{ lineHeight: "1.8", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
-                  Notre philosophie repose sur l'harmonie entre esthétique et
-                  fonctionnalité. Chaque espace que nous concevons est pensé
-                  pour être beau, confortable et parfaitement adapté au mode de
-                  vie de ses occupants.
+                  {t('about.philosophyDesc')}
                 </p>
                 <ul className="services-video-features">
-                  <li>Design pensé pour sublimer votre quotidien</li>
-                  <li>
-                    Harmonie parfaite entre esthétique et fonctionnalité
-                  </li>
-                  <li>Espaces conçus à votre image et à votre rythme</li>
+                  <li>{t('about.philosophyFeature1')}</li>
+                  <li>{t('about.philosophyFeature2')}</li>
+                  <li>{t('about.philosophyFeature3')}</li>
                 </ul>
               </div>
             </div>
@@ -218,8 +185,8 @@ const About = () => {
       <section className="section about-values" id="about-values">
         <div className="container">
           <AnimatedSection className="section-header">
-            <span className="section-subtitle">Nos Valeurs</span>
-            <h2 className="section-title">Ce qui nous définit</h2>
+            <span className="section-subtitle">{t('about.valuesSubtitle')}</span>
+            <h2 className="section-title">{t('about.valuesTitle')}</h2>
           </AnimatedSection>
 
           <div className="about-values__grid">
@@ -237,7 +204,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </main> // FIX 4 : </main> correspondant au <main> d'ouverture
+    </main>
   );
 };
 

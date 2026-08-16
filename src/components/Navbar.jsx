@@ -1,16 +1,19 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
+import { FiGlobe } from 'react-icons/fi';
 import './Navbar.css';
 
 /**
  * Navbar – Premium navigation with transparent-to-solid scroll effect
- * Includes mobile hamburger menu with slide animation
+ * Includes bilingual FR/EN switcher pill and mobile navigation
  */
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const location = useLocation();
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,11 +35,11 @@ const Navbar = () => {
   }, [isMobileOpen]);
 
   const navLinks = [
-    { path: '/', label: 'Accueil' },
-    { path: '/about', label: 'À Propos' },
-    { path: '/projects', label: 'Projets' },
-    { path: '/services', label: 'Services' },
-    { path: '/contact', label: 'Contact' },
+    { path: '/', label: t('nav.home') },
+    { path: '/about', label: t('nav.about') },
+    { path: '/projects', label: t('nav.projects') },
+    { path: '/services', label: t('nav.services') },
+    { path: '/contact', label: t('nav.contact') },
   ];
 
   return (
@@ -58,7 +61,7 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               className={`navbar__link ${location.pathname === link.path ? 'navbar__link--active' : ''}`}
-              id={`nav-link-${link.label.toLowerCase().replace(/\s/g, '-')}`}
+              id={`nav-link-${link.path.replace('/', '') || 'home'}`}
             >
               {link.label}
               {location.pathname === link.path && (
@@ -72,11 +75,33 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Action Buttons (CTA + Hamburger) */}
+        {/* Action Buttons (Language Switcher + CTA + Hamburger) */}
         <div className="navbar__actions">
+          {/* Language Switcher Pill */}
+          <div className="lang-switcher" id="lang-switcher">
+            <FiGlobe className="lang-switcher__icon" />
+            <button
+              className={`lang-switcher__btn ${language === 'fr' ? 'lang-switcher__btn--active' : ''}`}
+              onClick={() => setLanguage('fr')}
+              id="lang-btn-fr"
+              aria-label="Passer en Français"
+            >
+              FR
+            </button>
+            <span className="lang-switcher__divider">|</span>
+            <button
+              className={`lang-switcher__btn ${language === 'en' ? 'lang-switcher__btn--active' : ''}`}
+              onClick={() => setLanguage('en')}
+              id="lang-btn-en"
+              aria-label="Switch to English"
+            >
+              EN
+            </button>
+          </div>
+
           <Link to="/contact" className="navbar__cta btn btn-primary" id="navbar-cta">
-            <span className="navbar__cta-desktop">Devis Gratuit</span>
-            <span className="navbar__cta-mobile">Devis</span>
+            <span className="navbar__cta-desktop">{t('nav.freeQuote')}</span>
+            <span className="navbar__cta-mobile">{t('nav.shortQuote')}</span>
           </Link>
 
           {/* Hamburger Toggle */}
@@ -119,13 +144,35 @@ const Navbar = () => {
                   </Link>
                 </motion.div>
               ))}
+
+              {/* Mobile Language Switcher */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="navbar__mobile-lang"
+              >
+                <button
+                  className={`mobile-lang-btn ${language === 'fr' ? 'mobile-lang-btn--active' : ''}`}
+                  onClick={() => setLanguage('fr')}
+                >
+                  Français (FR)
+                </button>
+                <button
+                  className={`mobile-lang-btn ${language === 'en' ? 'mobile-lang-btn--active' : ''}`}
+                  onClick={() => setLanguage('en')}
+                >
+                  English (EN)
+                </button>
+              </motion.div>
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
               >
                 <Link to="/contact" className="btn btn-primary navbar__mobile-cta">
-                  Devis Gratuit
+                  {t('nav.freeQuote')}
                 </Link>
               </motion.div>
             </nav>

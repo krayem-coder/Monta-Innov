@@ -1,41 +1,94 @@
 /**
  * Portfolio projects data
- * Each project contains metadata and image paths from the public directory
+ * Each project contains metadata, image paths, and bilingual details (FR/EN)
  */
 
 const projects = [
   {
-    id: 'salon',
-    title: 'Salon',
+    id: 'villa-r',
+    title: 'Villa R',
+    titleEn: 'Villa R',
     category: 'Architecture Intérieure',
-    description: 'Conception et aménagement d\'un salon moderne et élégant, mêlant confort et esthétique contemporaine.',
+    categoryEn: 'Interior Architecture',
+    description: 'Conception et aménagement intérieur d\'une villa contemporaine d\'exception. Mariage subtil de boiseries chaleureuses, cheminée moderne intégrée, éclairage architectural et finitions sur-mesure de prestige.',
+    descriptionEn: 'Interior architecture and design of an exceptional contemporary villa. Subtle harmony of warm woodwork, custom integrated fireplace, ambient architectural lighting, and bespoke luxury finishes.',
     location: 'Tunisie',
+    locationEn: 'Tunisia',
+    year: '2025',
+    coverImage: '/images/portfolio/villa-r/r5.jpg',
+    images: [
+      '/images/portfolio/villa-r/r5.jpg',
+      '/images/portfolio/villa-r/r1.jpg',
+      '/images/portfolio/villa-r/r2.jpg',
+      '/images/portfolio/villa-r/r3.jpg',
+      '/images/portfolio/villa-r/r4.jpg',
+      '/images/portfolio/villa-r/r6.jpg',
+      '/images/portfolio/villa-r/r7.jpg',
+    ],
+    imageAlts: [
+      { fr: 'Villa R - Cheminée moderne et mur TV en bois sur-mesure (Image principale R5)', en: 'Villa R - Modern fireplace and custom wooden TV partition wall (Cover R5)' },
+      { fr: 'Villa R - Vue d\'ensemble du séjour contemporain avec cheminée suspendue', en: 'Villa R - Overview of contemporary living space with floating fireplace' },
+      { fr: 'Villa R - Détail du foyer et niche murale décorative avec rétroéclairage', en: 'Villa R - Fireplace detail and decorative wall niche with ambient lighting' },
+      { fr: 'Villa R - Salon luxueux avec canapé courbe et salle à manger élégante', en: 'Villa R - Luxury living room with curved sofa and elegant dining area' },
+      { fr: 'Villa R - Éclairage d\'ambiance et panneaux décoratifs en cannage', en: 'Villa R - Ambient lighting and rattan screen decorative panels' },
+      { fr: 'Villa R - Perspectives architecturales et séparation d\'espaces raffinée', en: 'Villa R - Architectural perspectives and refined space partition' },
+      { fr: 'Villa R - Agencement sur-mesure et matériaux nobles pierre et bois', en: 'Villa R - Custom layout and noble marble and wood materials' },
+    ]
+  },
+  {
+    id: 'salon',
+    title: 'Salon Contemporain',
+    titleEn: 'Contemporary Living Room',
+    category: 'Architecture Intérieure',
+    categoryEn: 'Interior Architecture',
+    description: 'Conception et aménagement d\'un salon moderne et élégant, mêlant confort et esthétique contemporaine.',
+    descriptionEn: 'Design and fit-out of a modern and elegant living room, blending comfort with contemporary aesthetics.',
+    location: 'Tunisie',
+    locationEn: 'Tunisia',
     year: '2025',
     images: [
       '/images/portfolio/salon/sn1.jpg',
       '/images/portfolio/salon/sn 2.jpg',
       '/images/portfolio/salon/sn3.jpg',
     ],
+    imageAlts: [
+      { fr: 'Salon Contemporain - Vue principale et mobilier sur-mesure', en: 'Contemporary Living Room - Main view and custom furniture' },
+      { fr: 'Salon Contemporain - Détail de l\'éclairage et textures', en: 'Contemporary Living Room - Lighting details and textures' },
+      { fr: 'Salon Contemporain - Perspective d\'agencement spacieux', en: 'Contemporary Living Room - Spacious layout perspective' },
+    ]
   },
   {
     id: 'villa-j',
     title: 'Villa J',
+    titleEn: 'Villa J',
     category: 'Architecture Intérieure',
+    categoryEn: 'Interior Architecture',
     description: 'Conception et aménagement d\'une villa luxueuse au style contemporain, dotée d\'une piscine extérieure raffinée, de patios lumineux et d\'un agencement sur-mesure d\'exception.',
+    descriptionEn: 'Design and fitting of a luxury villa featuring contemporary style, refined outdoor swimming pool, light-filled patios, and exceptional custom layout.',
     location: 'Tunisie',
+    locationEn: 'Tunisia',
     year: '2025',
     images: [
       '/images/portfolio/villa-j/j1.jpg',
       '/images/portfolio/villa-j/j2.jpg',
       '/images/portfolio/villa-j/j3.jpg',
     ],
+    imageAlts: [
+      { fr: 'Villa J - Façade extérieure et piscine de luxe', en: 'Villa J - Exterior facade and luxury swimming pool' },
+      { fr: 'Villa J - Espace de vie ouvert et baies vitrées', en: 'Villa J - Open living space and floor-to-ceiling windows' },
+      { fr: 'Villa J - Patio intérieur et végétation intégrée', en: 'Villa J - Interior patio and integrated greenery' },
+    ]
   },
   {
     id: 'villa-n',
     title: 'Villa N',
+    titleEn: 'Villa N',
     category: 'Architecture Intérieure',
+    categoryEn: 'Interior Architecture',
     description: 'Résidence d\'exception au design moderne et épuré. Mariage harmonieux de volumes architecturaux audacieux, de finitions en pierre naturelle et de terrasses surplombantes.',
+    descriptionEn: 'Exceptional private residence boasting sleek modern design. Harmonious fusion of bold architectural volumes, natural stone finishes, and panoramic terraces.',
     location: 'Tunisie',
+    locationEn: 'Tunisia',
     year: '2025',
     images: [
       '/images/portfolio/villa-n/snap1.jpg',
@@ -43,13 +96,23 @@ const projects = [
       '/images/portfolio/villa-n/snap 3.jpg',
       '/images/portfolio/villa-n/snap 4.jpg',
     ],
+    imageAlts: [
+      { fr: 'Villa N - Architecture moderne et finitions pierre', en: 'Villa N - Modern architecture and natural stone finishes' },
+      { fr: 'Villa N - Salon majestueux double hauteur', en: 'Villa N - Double-height majestic living room' },
+      { fr: 'Villa N - Espace repas et éclairage suspendu design', en: 'Villa N - Dining space and designer pendant lighting' },
+      { fr: 'Villa N - Vue extérieure crépusculaire', en: 'Villa N - Twilight exterior view' },
+    ]
   },
   {
     id: 'salle-de-bain-marocaine',
     title: 'Salle de Bain Marocaine',
+    titleEn: 'Moroccan Wellness Spa & Bath',
     category: 'Aménagement Sur-Mesure',
+    categoryEn: 'Bespoke Fit-Out',
     description: 'Création d\'un espace bien-être et hammam d\'inspiration marocaine traditionnelle et somptueuse. Détails artisanaux, céramiques sculptées, robinetterie dorée et éclairage d\'ambiance tamisé.',
+    descriptionEn: 'Creation of a sumptuous wellness hammam inspired by traditional Moroccan artistry. Artisanal tilework, carved ceramics, brass hardware, and subtle mood lighting.',
     location: 'Tunisie',
+    locationEn: 'Tunisia',
     year: '2025',
     images: [
       '/images/portfolio/salle-de-bain-marocaine/mar1.jpg',
@@ -58,13 +121,24 @@ const projects = [
       '/images/portfolio/salle-de-bain-marocaine/mar4.jpg',
       '/images/portfolio/salle-de-bain-marocaine/mar5.jpg',
     ],
+    imageAlts: [
+      { fr: 'Salle de Bain Marocaine - Hammam artisanal et baignoire d\'angle', en: 'Moroccan Bath - Handcrafted hammam and corner tub' },
+      { fr: 'Salle de Bain Marocaine - Céramiques zellige et finitions dorées', en: 'Moroccan Bath - Zellige ceramics and brass finishes' },
+      { fr: 'Salle de Bain Marocaine - Vasque en pierre sculptée sur-mesure', en: 'Moroccan Bath - Bespoke carved stone basin' },
+      { fr: 'Salle de Bain Marocaine - Éclairage d\'ambiance et niches éclairées', en: 'Moroccan Bath - Ambient lighting and illuminated alcoves' },
+      { fr: 'Salle de Bain Marocaine - Détails architecturaux orientaux', en: 'Moroccan Bath - Oriental architectural details' },
+    ]
   },
   {
     id: 'paris-france',
     title: 'Appartement Paris, France',
+    titleEn: 'Parisian Apartment, France',
     category: 'Architecture Intérieure',
+    categoryEn: 'Interior Architecture',
     description: 'Rénovation complète d\'un appartement parisien alliant élégance classique et design contemporain. Chaque espace a été repensé pour maximiser la lumière naturelle et créer une atmosphère raffinée.',
+    descriptionEn: 'Full renovation of a Parisian apartment combining classic Haussmannian elegance with contemporary design. Designed to maximize natural light and create a refined ambiance.',
     location: 'Paris, France',
+    locationEn: 'Paris, France',
     year: '2024',
     images: [
       '/images/portfolio/paris-france/486863055_1057547023059496_5020478667865636468_n.jpg',
@@ -72,13 +146,23 @@ const projects = [
       '/images/portfolio/paris-france/487306720_1057547229726142_860488963698072844_n (1).jpg',
       '/images/portfolio/paris-france/487407630_1057547163059482_3449294660296343306_n.jpg',
     ],
+    imageAlts: [
+      { fr: 'Appartement Paris - Salon Haussmannien rénové avec parquet point de Hongrie', en: 'Parisian Apartment - Renovated Haussmannian lounge with herringbone flooring' },
+      { fr: 'Appartement Paris - Suite parentale élégante et moulures d\'origine', en: 'Parisian Apartment - Elegant master suite with original moldings' },
+      { fr: 'Appartement Paris - Cuisine contemporaine intégrée sur-mesure', en: 'Parisian Apartment - Custom integrated contemporary kitchen' },
+      { fr: 'Appartement Paris - Salle de bain en marbre blanc et robinetterie noire', en: 'Parisian Apartment - White marble bathroom with sleek black hardware' },
+    ]
   },
   {
     id: 'cabinet-podologie',
     title: 'Cabinet de Podologie',
+    titleEn: 'Podiatry Medical Practice',
     category: 'Aménagement Sur-Mesure',
+    categoryEn: 'Bespoke Fit-Out',
     description: 'Conception et aménagement d\'un cabinet médical de podologie, alliant fonctionnalité professionnelle et esthétique apaisante pour le confort des patients.',
+    descriptionEn: 'Design and fit-out of a specialized podiatry medical practice, uniting medical functionality with a soothing aesthetic for patient comfort.',
     location: 'Tunisie',
+    locationEn: 'Tunisia',
     year: '2024',
     images: [
       '/images/portfolio/cabinet-podologie/487055657_1057531453061053_6429211202038797536_n.jpg',
@@ -86,13 +170,23 @@ const projects = [
       '/images/portfolio/cabinet-podologie/487385115_1057531573061041_4908193032364101280_n.jpg',
       '/images/portfolio/cabinet-podologie/487470581_1057531429727722_7342540949944505112_n.jpg',
     ],
+    imageAlts: [
+      { fr: 'Cabinet Podologie - Espace d\'accueil et réception médicale', en: 'Podiatry Practice - Reception lounge and medical desk' },
+      { fr: 'Cabinet Podologie - Salle de soin ergonomique et mobilier sur-mesure', en: 'Podiatry Practice - Ergonomic consultation room and custom cabinetry' },
+      { fr: 'Cabinet Podologie - Éclairage apaisant et finitions stériles élégantes', en: 'Podiatry Practice - Soothing lighting and clean elegant finishes' },
+      { fr: 'Cabinet Podologie - Zone d\'attente design et confortable', en: 'Podiatry Practice - Designer comfortable waiting lounge' },
+    ]
   },
   {
     id: 'residance-mharbech',
     title: 'Résidence Mharbech',
+    titleEn: 'Mharbech Residence',
     category: 'Architecture Intérieure',
+    categoryEn: 'Interior Architecture',
     description: 'Aménagement intérieur complet d\'une résidence moderne à Mharbech. Un projet ambitieux mêlant matériaux nobles, design épuré et solutions sur-mesure pour chaque pièce.',
+    descriptionEn: 'Full interior architecture for a contemporary private residence in Mharbech. An ambitious project blending noble materials, minimalist aesthetics, and custom solutions.',
     location: 'Mharbech, Tunisie',
+    locationEn: 'Mharbech, Tunisia',
     year: '2024',
     images: [
       '/images/portfolio/residance-mharbech/486647542_1057405689740296_7584105188495821796_n.jpg',
@@ -102,13 +196,25 @@ const projects = [
       '/images/portfolio/residance-mharbech/486716207_1057405543073644_8791084663571294987_n.jpg',
       '/images/portfolio/residance-mharbech/487389007_1057405573073641_6761784492454275568_n.jpg',
     ],
+    imageAlts: [
+      { fr: 'Résidence Mharbech - Grand séjour lumineux', en: 'Mharbech Residence - Bright spacious living room' },
+      { fr: 'Résidence Mharbech - Mur d\'accent en bois et cheminée', en: 'Mharbech Residence - Wood accent wall and fireplace' },
+      { fr: 'Résidence Mharbech - Salle à manger de réception', en: 'Mharbech Residence - Formal dining area' },
+      { fr: 'Résidence Mharbech - Cuisine ouverte et îlot central', en: 'Mharbech Residence - Open kitchen and central island' },
+      { fr: 'Résidence Mharbech - Suite parentale de prestige', en: 'Mharbech Residence - Prestige master bedroom' },
+      { fr: 'Résidence Mharbech - Escalier architectural suspendu', en: 'Mharbech Residence - Floating architectural staircase' },
+    ]
   },
   {
     id: 'projet-4',
     title: 'Villa Contemporaine',
+    titleEn: 'Contemporary Villa',
     category: 'Rénovation',
+    categoryEn: 'Renovation',
     description: 'Rénovation et décoration d\'une villa contemporaine avec une attention particulière portée aux volumes, à la luminosité et au choix des matériaux haut de gamme.',
+    descriptionEn: 'Renovation and styling of a contemporary villa with dedicated focus on spatial volume, natural illumination, and premium material curation.',
     location: 'Tunisie',
+    locationEn: 'Tunisia',
     year: '2025',
     images: [
       '/images/portfolio/projet-4/518331728_1144025397744991_7245478233109642898_n.jpg',
@@ -118,13 +224,25 @@ const projects = [
       '/images/portfolio/projet-4-sub/657329400_1346033630877499_6576489408820056166_n.jpg',
       '/images/portfolio/projet-4-sub/657874769_1346033614210834_6819738056540507567_n.jpg',
     ],
+    imageAlts: [
+      { fr: 'Villa Contemporaine - Salons réaménagés et baies vitrées', en: 'Contemporary Villa - Remodeled salons and panoramic glazing' },
+      { fr: 'Villa Contemporaine - Espace détente et boiseries sombres', en: 'Contemporary Villa - Lounge zone with rich dark woodwork' },
+      { fr: 'Villa Contemporaine - Terrasse d\'été et mobilier extérieur', en: 'Contemporary Villa - Summer patio and outdoor lounge' },
+      { fr: 'Villa Contemporaine - Rénovation de la suite de luxe', en: 'Contemporary Villa - Luxury bedroom suite redesign' },
+      { fr: 'Villa Contemporaine - Dressing sur-mesure rétroéclairé', en: 'Contemporary Villa - Custom backlit walk-in closet' },
+      { fr: 'Villa Contemporaine - Salle d\'eau et marbre italien', en: 'Contemporary Villa - Italian marble bathroom' },
+    ]
   },
   {
     id: 'projet-5',
-    title: 'Espace Commercial',
+    title: 'Espace Commercial Premium',
+    titleEn: 'Premium Commercial Space',
     category: 'Aménagement Sur-Mesure',
+    categoryEn: 'Bespoke Fit-Out',
     description: 'Conception d\'un espace commercial premium, pensé pour sublimer l\'expérience client à travers un agencement fluide et un design d\'intérieur sophistiqué.',
+    descriptionEn: 'Design of a premium commercial space engineered to enhance customer experience through intuitive layout flow and sophisticated interior styling.',
     location: 'Tunisie',
+    locationEn: 'Tunisia',
     year: '2024',
     images: [
       '/images/portfolio/projet-5/481287616_1058217466325785_7197530932275917326_n (1).jpg',
@@ -132,13 +250,23 @@ const projects = [
       '/images/portfolio/projet-5/487201637_1058217512992447_19183065012884490_n.jpg',
       '/images/portfolio/projet-5/487240330_1058217472992451_5716427979706335248_n.jpg',
     ],
+    imageAlts: [
+      { fr: 'Espace Commercial - Vue de la zone d\'exposition et comptoir', en: 'Commercial Space - Exhibition zone and counter view' },
+      { fr: 'Espace Commercial - Présentoirs sur-mesure rétroéclairés', en: 'Commercial Space - Custom backlit retail displays' },
+      { fr: 'Espace Commercial - Éclairage architectural et matériaux de prestige', en: 'Commercial Space - Architectural lighting and premium textures' },
+      { fr: 'Espace Commercial - Agencement fluide du parcours client', en: 'Commercial Space - Intuitive customer journey flow layout' },
+    ]
   },
   {
     id: 'projet-6',
     title: 'Design Intérieur Moderne',
+    titleEn: 'Modern Interior Design',
     category: 'Design & Modélisation 3D',
+    categoryEn: '3D Design & Modeling',
     description: 'Projet de design intérieur moderne combinant modélisation 3D avancée et réalisation sur-mesure. Un équilibre parfait entre fonctionnalité et esthétique.',
+    descriptionEn: 'Modern interior design project combining photorealistic 3D modeling with custom fabrication. A perfect harmony of aesthetics and utility.',
     location: 'Tunisie',
+    locationEn: 'Tunisia',
     year: '2024',
     images: [
       '/images/portfolio/projet-6/486815553_1057544803059718_1230680352218054465_n.jpg',
@@ -146,13 +274,23 @@ const projects = [
       '/images/portfolio/projet-6/487283619_1057544449726420_1862382285099144169_n.jpg',
       '/images/portfolio/projet-6/487384013_1057544703059728_2573411686786308861_n.jpg',
     ],
+    imageAlts: [
+      { fr: 'Design Intérieur Moderne - Rendu 3D photoréalisme du salon', en: 'Modern Interior Design - 3D photorealistic lounge render' },
+      { fr: 'Design Intérieur Moderne - Vue 3D de la salle à manger', en: 'Modern Interior Design - 3D dining area perspective' },
+      { fr: 'Design Intérieur Moderne - Concept d\'éclairage et faux plafond', en: 'Modern Interior Design - Lighting concept and drop ceiling' },
+      { fr: 'Design Intérieur Moderne - Détail des textures et finitions', en: 'Modern Interior Design - Texture and finish specifications' },
+    ]
   },
   {
     id: 'projet-7',
     title: 'Rénovation Luxe',
+    titleEn: 'Luxury Renovation',
     category: 'Rénovation',
+    categoryEn: 'Renovation',
     description: 'Rénovation luxueuse d\'un intérieur haut de gamme. Matériaux premium, finitions impeccables et design pensé dans les moindres détails pour un résultat exceptionnel.',
+    descriptionEn: 'High-end luxury renovation of a private residence. Premium materials, flawless execution, and meticulously detailed architectural design.',
     location: 'Tunisie',
+    locationEn: 'Tunisia',
     year: '2024',
     images: [
       '/images/portfolio/projet-7/487161839_1058223126325219_6035687888206241318_n.jpg',
@@ -160,13 +298,23 @@ const projects = [
       '/images/portfolio/projet-7/487313332_1058222932991905_2868458452263464948_n.jpg',
       '/images/portfolio/projet-7/487406865_1058222849658580_3892016505649048499_n.jpg',
     ],
+    imageAlts: [
+      { fr: 'Rénovation Luxe - Séjour rénové aux tons neutres et bois', en: 'Luxury Renovation - Remodeled lounge in neutral tones and timber' },
+      { fr: 'Rénovation Luxe - Mur d\'accent TV et finitions dorées', en: 'Luxury Renovation - TV accent wall with brass accents' },
+      { fr: 'Rénovation Luxe - Espace repas chaleureux', en: 'Luxury Renovation - Warm inviting dining setting' },
+      { fr: 'Rénovation Luxe - Luminaire d\'artiste et plafond suspendu', en: 'Luxury Renovation - Designer chandelier and custom ceiling' },
+    ]
   },
   {
     id: 'projet-8',
     title: 'Villa de Luxe Moderne',
+    titleEn: 'Modern Luxury Villa',
     category: 'Architecture Intérieure',
+    categoryEn: 'Interior Architecture',
     description: 'Aménagement et décoration d\'une luxueuse villa, alliant matériaux nobles, volumes majestueux et design sophistiqué pour un cadre de vie d\'exception.',
+    descriptionEn: 'Interior architecture and styling of a luxury villa, uniting noble textures, majestic proportions, and sophisticated living spaces.',
     location: 'Tunisie',
+    locationEn: 'Tunisia',
     year: '2024',
     images: [
       '/images/portfolio/projet-8/482019286_1044942854319913_2682986280919652672_n.jpg',
@@ -174,19 +322,34 @@ const projects = [
       '/images/portfolio/projet-8/484147567_1044943144319884_7703694651280687327_n.jpg',
       '/images/portfolio/projet-8/484164441_1044943284319870_1475416367196423504_n.jpg',
     ],
+    imageAlts: [
+      { fr: 'Villa de Luxe Moderne - Entrée majestueuse et marbre', en: 'Modern Luxury Villa - Grand marble foyer entrance' },
+      { fr: 'Villa de Luxe Moderne - Salon de réception avec baies coulissantes', en: 'Modern Luxury Villa - Reception lounge with sliding glass walls' },
+      { fr: 'Villa de Luxe Moderne - Suite principale avec dressing en verre', en: 'Modern Luxury Villa - Master suite with glass walk-in wardrobe' },
+      { fr: 'Villa de Luxe Moderne - Éclairage crépusculaire des façades', en: 'Modern Luxury Villa - Exterior facade twilight illumination' },
+    ]
   },
   {
     id: 'projet-9',
     title: 'Villa d\'Exception',
+    titleEn: 'Prestige Private Residence',
     category: 'Architecture Intérieure',
+    categoryEn: 'Interior Architecture',
     description: 'Rénovation complète d\'une somptueuse villa de luxe. Une harmonie parfaite entre design contemporain, élégance intemporelle et prestations haut de gamme.',
+    descriptionEn: 'Comprehensive renovation of a lavish private villa. Flawless harmony between contemporary style, timeless elegance, and elite craftsmanship.',
     location: 'Tunisie',
+    locationEn: 'Tunisia',
     year: '2023',
     images: [
       '/images/portfolio/projet-9/477144519_1024627659684766_1244374077137295068_n (1).jpg',
       '/images/portfolio/projet-9/477174474_1024627643018101_1616919540708642266_n.jpg',
       '/images/portfolio/projet-9/477550151_1024627376351461_365933731261415974_n.jpg',
     ],
+    imageAlts: [
+      { fr: 'Villa d\'Exception - Grand salon lumineux', en: 'Prestige Residence - Bright grand living area' },
+      { fr: 'Villa d\'Exception - Détail du mobilier et draperies', en: 'Prestige Residence - Furniture detail and tailored drapery' },
+      { fr: 'Villa d\'Exception - Vue sur le jardin paysager', en: 'Prestige Residence - View of landscaped garden' },
+    ]
   },
 ];
 
